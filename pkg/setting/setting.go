@@ -22,7 +22,7 @@ var (
 
 func init() {
 	var err error
-	Cfg, err = ini.Load("server_gin/conf/app.ini")
+	Cfg, err = ini.Load("conf/app.ini")
 	if err != nil {
 		log.Fatalf("Fail to parse 'conf/app.ini': %v", err)
 	}
@@ -30,6 +30,7 @@ func init() {
 	LoadBase()
 	LoadServer()
 	LoadApp()
+	log.Printf("%s","加载app.ini配置成功")
 }
 
 func LoadBase() {

@@ -2,6 +2,7 @@ package models
 
 import (
 	"log"
+
 	"fmt"
 
 	"github.com/jinzhu/gorm"
@@ -54,6 +55,7 @@ func init() {
 	db.LogMode(true)
 	db.DB().SetMaxIdleConns(10)
 	db.DB().SetMaxOpenConns(100)
+	log.Printf("%s","加载mysql配置成功")
 }
 
 func CloseDB() {
